@@ -1,0 +1,31 @@
+---
+title: "README"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## colAUC
+
+Add a `maxAUC` argument to optionally suppress `max(AUC, 1-AUC)` line
+
+```{r}
+devtools::install_github("Tazinho/caTools")
+library(caTools)
+
+iris2 <- iris[1:100,]
+iris2[["Species"]] <- as.character(iris2[["Species"]])
+
+set.seed(123)
+n <- nrow(iris2)
+
+iris2[["random_1"]] <- rnorm(100)
+iris2[["random_2"]] <- rnorm(100)
+iris2[["random_3"]] <- rnorm(100)
+iris2[["random_4"]] <- rnorm(100)
+
+colAUC(iris2[-5], y = iris2[["Species"]])
+colAUC(iris2[-5], y = iris2[["Species"]], maxAUC = FALSE)
+```
