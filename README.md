@@ -16,7 +16,7 @@ devtools::install_github("Tazinho/caTools")
 
     ## "C:/PROGRA~1/R/R-34~1.3/bin/x64/R" --no-site-file --no-environ --no-save  \
     ##   --no-restore --quiet CMD INSTALL  \
-    ##   "C:/Users/MGO/AppData/Local/Temp/RtmpwVQORF/devtools14703fd46608/Tazinho-caTools-2c8ceb5"  \
+    ##   "C:/Users/MGO/AppData/Local/Temp/Rtmpyky40y/devtools1c641bbb229b/Tazinho-caTools-4eed65b"  \
     ##   --library="C:/Users/MGO/Documents/R/win-library/3.4" --install-tests
 
     ## 
