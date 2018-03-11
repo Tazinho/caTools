@@ -5,7 +5,10 @@ This is a fork of the R caTools package (v1.17.1) with some minor modifications
 
 Added a `maxAUC` argument to suppress the line `max(AUC, 1-AUC)`
 
-```{
+```{r}
+devtools::install_github("Tazinho/caTools")
+library(caTools)
+
 iris2 <- iris[1:100,]
 iris2[["Species"]] <- as.character(iris2[["Species"]])
 
@@ -19,4 +22,4 @@ iris2[["random_4"]] <- rnorm(100)
 
 colAUC(iris2[-5], y = iris2[["Species"]])
 colAUC(iris2[-5], y = iris2[["Species"]], maxAUC = FALSE)
-}
+```
