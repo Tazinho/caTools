@@ -5,14 +5,14 @@ output: rmarkdown::github_document
 # caTools (Modifications)
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, results='asis')
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## colAUC
 
 Add a `maxAUC` argument to optionally suppress `max(AUC, 1-AUC)` line
 
-```{r}
+```{r, warning=FALSE, message=FALSE}
 devtools::install_github("Tazinho/caTools")
 library(caTools)
 
