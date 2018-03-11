@@ -5,7 +5,7 @@ This is a fork of the R caTools package (v1.17.1) with some minor modifications
 
 Added a `maxAUC` argument to suppress the line `max(AUC, 1-AUC)`
 
-```{r}
+```{r, results='asis'}
 devtools::install_github("Tazinho/caTools")
 library(caTools)
 
