@@ -4,7 +4,7 @@
 # Distributed under GNU General Public License version 3                    #
 #===========================================================================#
 
-colAUC = function (X, y, plotROC=FALSE, alg=c("Wilcoxon","ROC"))
+colAUC = function (X, y, plotROC=FALSE, alg=c("Wilcoxon","ROC"), maxAUC = TRUE)
 {   
   # input:
   #   X - 2D matrix (of feature columns and samples rows)
@@ -110,6 +110,6 @@ colAUC = function (X, y, plotROC=FALSE, alg=c("Wilcoxon","ROC"))
       }
     } # end of 'for j' loop
   }
-  Auc = pmax(Auc, 1-Auc) # if any auc<0.5 than mirror it to the other side of 0.5
+  if(maxAUC) {Auc = pmax(Auc, 1-Auc)} # if any auc<0.5 than mirror it to the other side of 0.5
   return (Auc)
 }
